@@ -13,25 +13,38 @@ To start working with this project you will need to:
 
 ## Run the web server
 
-Run the Symfony web server with:
+Run the Symfony web server (in the background) with:
 ```bash
-symfony serve
+symfony serve -d
+```
+
+## Stop the web server
+
+Stop the Symfony web server with:
+```bash
+symfony server:stop
 ```
 
 
-## BONUS - setup for testing
+## Useful - run SQL queries from command line
+
+```bash
+symfony console d:q:sql "select * from TABLE"
+```
+
+## BONUS - setup for testing (advanced)
 
 If you want to try out some of the tests (in folder `tests`) you'll need to set up the test environment database by doing the follow:
 
 - create the database with `symfony console d:d:c --env=test`
-- execute the (existing) SQL table creation (migrations) code with `symfony console --env=test`
+- execute the (existing) SQL table creation (migrations) code with `symfony console d:m:m --env=test`
 - load the initial data (fixtures) into the DB with  `symfony console d:f:l --env=test`
 
 ## Run the tests
 
 Run the Symfony web server with:
 ```bash
-php vendor/bin/codecept run
+php bin/phpunit
 ```
 
 
