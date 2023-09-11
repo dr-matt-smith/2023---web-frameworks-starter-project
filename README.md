@@ -1,6 +1,17 @@
 # CRUD quickstart project
 
-## Setup
+##(1) Change PHPStorm Terminal to the Windows 'cmd' (NOT powershell)
+
+![cmd_terminal_screenshot](_cmd_terminal_screenshot.png)
+
+## (2) Install the certificate so you can run HTTPS: 
+
+```bash
+symfony.exe server:ca:install
+```
+
+
+## OLD CRUD quickstart notes .....
 
 To start working with this project you will need to:
 
